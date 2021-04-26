@@ -9,9 +9,9 @@ an executable
 
 -- general
 O.auto_complete = true
-O.colorscheme = 'lunar'
+O.colorscheme = 'gruvbox'
 O.auto_close_tree = 0
-O.wrap_lines = false
+O.wrap_lines = true
 O.timeoutlen = 100
 
 -- dashboard 
@@ -51,7 +51,7 @@ O.lua.autoformat = false
 
 -- javascript
 O.tsserver.formatter = 'prettier'
-O.tsserver.linter = nil
+O.tsserver.linter = 'eslint'
 O.tsserver.autoformat = true
 
 -- json
