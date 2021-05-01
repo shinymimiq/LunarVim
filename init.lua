@@ -51,6 +51,8 @@ require('lsp.tailwindcss-ls')
 require('lsp.vim-ls')
 require('lsp.vue-ls')
 require('lsp.yaml-ls')
+require('lsp.json-ls')
+require('lsp.yaml-ls')
 
 vim.api.nvim_exec(
 [[
