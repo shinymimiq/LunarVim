@@ -84,8 +84,8 @@ return require("packer").startup(
 
 
         -- Customize
-        use {"davidoc/taskpaper.vim", opt = true}
-        use {"tpope/vim-fugitive", opt = true}
+        use {"davidoc/taskpaper.vim"}
+        use {'tpope/vim-fugitive'}
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -110,7 +110,5 @@ return require("packer").startup(
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
-        require_plugin("davidoc/taskpaper.vim")
-        require_plugin("tpope/vim-fugitive")
     end
 )
