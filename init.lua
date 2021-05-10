@@ -51,3 +51,23 @@ require('lsp.angular-ls')
 -- require('lsp.ruby-ls')
 -- require('lsp.kotlin-ls')
 
+require "format".setup {
+    ["*"] = {
+        {cmd = {"sed -i 's/[ \t]*$//'"}} -- remove trailing whitespace
+    },
+    javascript = {
+        {cmd = {"prettier -w", "./node_modules/.bin/eslint --fix"}}
+    },
+    javascriptreact = {
+        {cmd = {"prettier -w", "./node_modules/.bin/eslint --fix"}}
+    }
+}
+
+vim.api.nvim_exec(
+[[
+augroup Format
+    autocmd!
+    autocmd BufWritePost * FormatWrite
+augroup END
+]]
+, true)
