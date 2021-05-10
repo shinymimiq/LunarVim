@@ -86,14 +86,6 @@ return require("packer").startup(
         -- Customize
         use {"davidoc/taskpaper.vim", opt = true}
         use {"tpope/vim-fugitive", opt = true}
-        -- use {'prettier/vim-prettier',
-        --     run = 'yarn install',
-        --     ft = {'javascript', 'javascriptreact',
-        --     'typescript', 'typescriptreact',
-        --     'css', 'less', 'scss', 
-        --     'json', 'graphql', 
-        --     'markdown', 'vue', 'yaml', 'html'},
-        -- }
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
