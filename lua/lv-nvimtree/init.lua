@@ -20,6 +20,9 @@ vim.g.nvim_tree_indent_markers = 1 -- "0 by default, this option shows indent ma
 vim.g.nvim_tree_follow = 1 -- "0 by default, this option allows the cursor to be updated when entering a buffer
 vim.g.nvim_tree_auto_close = O.auto_close_tree -- 0 by default, closes the tree when it's the last window
 vim.g.nvim_tree_auto_ignore_ft = 'startify' --empty by default, don't auto open tree on specific filetypes.
+vim.g.nvim_tree_width = 25
+
+
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
     vim.g.nvim_tree_bindings = {
       -- ["<CR>"] = ":YourVimFunction()<cr>",
