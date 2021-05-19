@@ -86,7 +86,6 @@ return require("packer").startup(
         -- Customize
         use {"davidoc/taskpaper.vim"}
         use {'tpope/vim-fugitive'}
-        use { 'lukas-reineke/format.nvim' }
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
