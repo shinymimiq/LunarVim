@@ -69,8 +69,8 @@ vim.api.nvim_set_keymap('n', '<Leader>e',
                         {noremap = true, silent = true})
 
 -- telescope
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>',
-                        {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files theme=get_dropdown<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>r', ':Telescope live_grep theme=get_dropdown<CR>', {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>',
@@ -95,6 +95,8 @@ local mappings = {
     ["e"] = "Explorer",
     ["f"] = "Find File",
     ["h"] = "No Highlight",
+    ["p"] = "Projects",
+    ["r"] = "Global Grep",
     b = {
         name = "Buffers",
         j = {"<cmd>BufferPick<cr>", "jump to buffer"},
@@ -116,6 +118,24 @@ local mappings = {
             "<cmd>BufferOrderByLanguage<cr>",
             "sort BufferLines automatically by language"
         }
+    },
+    d = {
+        name = "+Diagnostics",
+        t = {"<cmd>TroubleToggle<cr>", "trouble"},
+        w = {"<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "workspace"},
+        d = {"<cmd>TroubleToggle lsp_document_diagnostics<cr>", "document"},
+        q = {"<cmd>TroubleToggle quickfix<cr>", "quickfix"},
+        l = {"<cmd>TroubleToggle loclist<cr>", "loclist"},
+        r = {"<cmd>TroubleToggle lsp_references<cr>", "references"},
+    },
+    D = {
+        name = "+Debug",
+        b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
+        c = {"<cmd>DebugContinue<cr>", "Continue"},
+        i = {"<cmd>DebugStepInto<cr>", "Step Into"},
+        o = {"<cmd>DebugStepOver<cr>", "Step Over"},
+        r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
+        s = {"<cmd>DebugStart<cr>", "Start"}
     },
 
 -- diagnostics vanilla nvim
@@ -176,41 +196,33 @@ local mappings = {
             "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
             "Undo Stage Hunk"
         },
-        o = {"<cmd>Telescope git_status<cr>", "Open changed file"},
-        b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
-        c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
-        C = {
-            "<cmd>Telescope git_bcommits<cr>",
-            "Checkout commit(for current file)"
-        }
+        o = {"<cmd>Telescope git_status theme=get_dropdown<cr>", "Open changed file"},
+        b = {"<cmd>Telescope git_branches theme=get_dropdown<cr>", "Checkout branch"},
+        c = {"<cmd>Telescope git_commits theme=get_dropdown<cr>", "Checkout commit"},
+        C = {"<cmd>Telescope git_bcommits theme=get_dropdown<cr>", "Checkout commit(for current file)"},
     },
     l = {
         name = "LSP",
         a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
         A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
-        d = {
-            "<cmd>Telescope lsp_document_diagnostics<cr>",
-            "Document Diagnostics"
-        },
-        D = {
-            "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-            "Workspace Diagnostics"
-        },
         f = {"<cmd>lua vim.lsp.buf.formatting()<cr>", "Format"},
+        d = {"<cmd>Telescope lsp_document_diagnostics theme=get_dropdown<cr>", "Document Diagnostics"},
+        D = {"<cmd>Telescope lsp_workspace_diagnostics theme=get_dropdown<cr>", "Workspace Diagnostics"},
+        f = {"<cmd>LspFormatting<cr>", "Format"},
         h = {"<cmd>Lspsaga hover_doc<cr>", "Hover Doc"},
         i = {"<cmd>LspInfo<cr>", "Info"},
         l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
         L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
         p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
-        q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
+        q = {"<cmd>Telescope quickfix theme=get_dropdown<cr>", "Quickfix"},
         r = {"<cmd>Lspsaga rename<cr>", "Rename"},
         t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
         x = {"<cmd>cclose<cr>", "Close Quickfix"},
-        s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
+        s = {"<cmd>Telescope lsp_document_symbols theme=get_dropdown<cr>", "Document Symbols"},
         S = {
-            "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+            "<cmd>Telescope lsp_dynamic_workspace_symbols theme=get_dropdown<cr>",
             "Workspace Symbols"
-        }
+        },
     },
     r = {
         name = "Replace",
@@ -238,6 +250,19 @@ local mappings = {
         r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
         R = {"<cmd>Telescope registers<cr>", "Registers"},
         t = {"<cmd>Telescope live_grep<cr>", "Text"}
+    },
+    s = {
+        name = "+Search",
+        b = {"<cmd>Telescope git_branches theme=get_dropdown<cr>", "Checkout branch"},
+        c = {"<cmd>Telescope colorscheme theme=get_dropdown<cr>", "Colorscheme"},
+        d = {"<cmd>Telescope lsp_document_diagnostics theme=get_dropdown<cr>", "Document Diagnostics"},
+        D = {"<cmd>Telescope lsp_workspace_diagnostics theme=get_dropdown<cr>", "Workspace Diagnostics"},
+        f = {"<cmd>Telescope find_files theme=get_dropdown<cr>", "Find File"},
+        m = {"<cmd>Telescope marks theme=get_dropdown<cr>", "Marks"},
+        M = {"<cmd>Telescope man_pages theme=get_dropdown<cr>", "Man Pages"},
+        r = {"<cmd>Telescope oldfiles theme=get_dropdown<cr>", "Open Recent File"},
+        R = {"<cmd>Telescope registers theme=get_dropdown<cr>", "Registers"},
+        t = {"<cmd>Telescope live_grep theme=get_dropdown<cr>", "Text"}
     },
     S = {
         name = "Session",
