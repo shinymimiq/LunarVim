@@ -1,0 +1,303 @@
+information:
+  name: pokemon
+  background: dark
+  author: "Shinymimikyu<shinymimiq@gmail.com>"
+
+palette:
+  fg: "#F8F8F2"
+  bg: "#2B2B2B"
+
+
+  red: "#D3425F" # fighting
+  error_red: "#F44747"
+  green: "#5FBD58" # grass
+  light_green: "#92BC2C" # bug
+  yellow: "#F2D94E" # electric
+  dark_yellow: "#C9BB8A" #Rock
+  orange: "#FBA54C" # fire
+  dark_orange: "#DA7C4D" # ground
+  grey: "#A0A29F" # normal
+  blue: "#539DDF" # water
+  grey_blue: "#5F6DBC" # ghost
+  light_blue: "#A1BBEC" # flying
+  cyan: "#75D0C1" # ice
+  dark_cyan: "#5695A3" # steel
+  vivid_blue: "#0C69C8" # dragon
+  pink: "#FA8581" # psychic
+  light_purple: "#EE90E6" # fairy
+  purple: "#B763CF" # poison
+  white: "#D8DEE9"
+  black: "#2B2B2B"
+  line_grey: "#595761" # dark
+  gutter_fg_grey: "#4B5263"
+  cursor_grey: "#4A494E"
+  # cursor_grey: "#2C323C"
+  visual_grey: "#3E4452"
+  menu_grey: "#282C34"
+  special_grey: "#3B4048"
+  vertsplit: "#181A1F"
+
+highlights:
+  Normal: "fg bg"
+
+  Comment: "grey - i"
+  Constant: "dark_yellow"
+  String: "light_blue"
+  Character: "orange"
+  Number: "dark_yellow"
+  Boolean: "cyan"
+  Float: "dark_yellow"
+  Identifier: "cyan"
+  Function: "pink"
+  Statement: "purple"
+  Conditional: "orange"
+  Repeat: "purple"
+  Label: "grey_blue"
+  Operator: "orange"
+  Keyword: "vivid_blue"
+  Exception: "red"
+  PreProc: "dark_orange"
+  Include: "dark_orange"
+  Define: "dark_orange"
+  Title: "grey_blue"
+  Macro: "purple"
+  PreCondit: "cyan"
+  Type: "cyan - i"
+  StorageClass: "pink"
+  Structure: "pink"
+  Typedef: "yellow"
+  Special: "green - i"
+  SpecialComment: "line_grey"
+  Error: "error_red - br"
+  Todo: "yellow - bi"
+  Underlined: "cyan . u"
+  Cursor: "- - r"
+
+  ColorColumn: "- cursor_grey"
+  CursorLineNr: "white - b"
+  SignColumn: "- bg"
+  Conceal: "line_grey"
+  CursorColumn: "- cursor_grey"
+  CursorLine: "- cursor_grey"
+  Directory: "cyan"
+  DiffAdd: "black green"
+  DiffChange: "orange"
+  DiffDelete: "red"
+  DiffText: "line_grey"
+  ErrorMsg: "error_red"
+  VertSplit: "vertsplit"
+  Folded: "line_grey"
+  FoldColumn: ""
+  IncSearch: "yellow line_grey"
+  LineNr: "line_grey"
+  MatchParen: "fg - u"
+  NonText: "special_grey"
+  Pmenu: "white black"
+  PmenuSel: "fg cursor_grey"
+  PmenuSbar: "- special_grey"
+  PmenuThumb: "- white"
+  Question: "purple"
+  QuickFixLine: "black yellow"
+  Search: "black yellow"
+  SpecialKey: "special_grey"
+  SpellBad: "error_red - u"
+  SpellCap: "yellow"
+  SpellLocal: "yellow"
+  SpellRare: "yellow"
+  StatusLine: "white cursor_grey"
+  StatusLineNC: "line_grey"
+  StatusLineTerm: "white cursor_grey"
+  StatusLineTermNC: "cursor_grey"
+  TabLine: "line_grey"
+  TabLineSel: "white"
+  TabLineFill: "- bg"
+  Terminal: "white black"
+  Visual: "- cursor_grey"
+  VisualNOS: "cursor_grey"
+  WarningMsg: "yellow"
+  WildMenu: "black cyan"
+  EndOfBuffer: "black"
+
+  # -- Start Treesitter --
+  # Misc
+  TSError: "error_red"
+  TSPunctDelimiter: "fg"
+  TSPunctBracket: "fg"
+  TSPunctSpecial: "fg"
+  # Constants
+  TSConstant: "dark_yellow" #
+  TSConstBuiltin: "dark_yellow" #
+  # Not sure about this guy
+  TSConstMacro: "blue" #
+  TSStringRegex: "orange" #
+  TSString: "light_blue" #
+  TSStringEscape: "cyan" #
+  TSCharacter: "green"
+  TSNumber: "yellow" #
+  TSBoolean: "dark_yellow" #
+  TSFloat: "dark_yellow" #
+  TSAnnotation: "yellow"
+  TSAttribute: "dark_cyan" #
+  TSNamespace: "#FF00FF"
+  # Functions
+  TSFuncBuiltin: "cyan"
+  TSFunction: "pink" #
+  TSFuncMacro: "pink" #
+  TSParameter: "fg" #
+  TSParameterReference: "fg" #
+  TSMethod: "pink" #
+  TSField: "orange"
+  TSProperty: "fg"
+  TSConstructor: "cyan"
+  # Keywords
+  TSConditional: "pink"
+  TSRepeat: "pink"
+  TSLabel: "cyan"
+
+  # Does not work for yield and return they should be diff then class and def
+  TSKeyword: "blue" #
+  TSKeywordFunction: "pink" #
+  TSKeywordOperator: "orange" #
+  TSOperator: "orange" #
+  TSException: "red" #
+  TSType: "cyan" #
+  TSTypeBuiltin: "blue - i" #
+  TSStructure: "cyan" #
+  TSInclude: "dark_orange" #
+  # Variable
+  TSVariable: "fg" #
+  TSVariableBuiltin: "blue" #
+
+  # Text
+  TSText: "#FFFF00"
+  TSStrong: "#FFFF00"
+  TSEmphasis: "#FFFF00"
+  TSUnderline: "#FFFF00"
+  TSTitle: "#FFFF00"
+  TSLiteral: "#FFFF00"
+  TSURI: "#FFFF00"
+  # Tags
+  TSTag: "cyan"
+  TSTagDelimiter: "white"
+  # -- END Treesitter --
+
+  # -- START Languages --
+  # HTML (keep consistent with Markdown, below)
+  htmlArg: "yellow"
+  htmlBold: "yellow - b"
+  htmlEndTag: "white"
+  htmlH1: "pink"
+  htmlH2: "pink"
+  htmlH3: "pink"
+  htmlH4: "pink"
+  htmlH5: "pink"
+  htmlH6: "pink"
+  htmlItalic: "purple - i"
+  htmlLink: "green - u"
+  htmlSpecialChar: "yellow"
+  htmlSpecialTagName: "cyan"
+  htmlTag: "pink"
+  htmlTagN: "pink"
+  htmlTagName: "cyan"
+  htmlTitle: "white"
+
+  # Markdown (keep consistent with HTML, above)
+  markdownBlockquote: "yellow - i"
+  markdownBold: "orange - b"
+  markdownCode: "light_blue"
+  markdownCodeBlock: "light_blue"
+  markdownCodeDelimiter: "yellow"
+  markdownH1: "dark_orange - b"
+  markdownH2: "dark_orange - b"
+  markdownH3: "dark_orange - b"
+  markdownH4: "dark_orange - b"
+  markdownH5: "dark_orange - b"
+  markdownH6: "dark_orange - b"
+  markdownHeadingDelimiter: "yellow"
+  markdownHeadingRule: "line_grey"
+  markdownId: "purple"
+  markdownIdDeclaration: "cyan"
+  markdownIdDelimiter: "purple"
+  markdownItalic: "yellow - i"
+  markdownLinkDelimiter: "purple"
+  markdownLinkText: "pink"
+  markdownListMarker: "cyan"
+  markdownOrderedListMarker: "red"
+  markdownRule: "line_grey"
+  markdownUrl: "cyan - u"
+  # -- END Languages --
+
+  # -- START CoC --
+  CocExplorerIndentLine: "line_grey"
+  CocExplorerBufferRoot: "cyan"
+  CocExplorerFileRoot: "cyan"
+  CocExplorerBufferFullPath: "line_grey"
+  CocExplorerFileFullPath: "line_grey"
+  CocExplorerBufferReadonly: "red"
+  CocExplorerBufferModified: "purple"
+  CocExplorerBufferNameVisible: "green"
+  CocExplorerFileReadonly: "red"
+  CocExplorerFileModified: "purple"
+  CocExplorerFileHidden: "line_grey"
+  CocExplorerHelpLine: "purple"
+  # -- END CoC --
+
+  # -- START Easymotion --
+  EasyMotionTarget: "error_red - b"
+  EasyMotionTarget2First: "error_red - b"
+  EasyMotionTarget2Second: "error_red - b"
+  EasyMotionShade: ""
+  # EasyMotionIncSearch:
+  # EasyMotionMoveHL:
+
+  # -- END Easymotion --
+
+  # -- START Startify --
+  StartifyNumber: "orange"
+  StartifySelect: "green"
+  StartifyBracket: "pink"
+  StartifySpecial: "cyan"
+  StartifyVar: "pink"
+  StartifyPath: "cyan"
+  StartifyFile: "red"
+  StartifySlash: "pink"
+  StartifyHeader: "green"
+  StartifySection: "purple"
+  StartifyFooter: "green"
+  # -- END Startify --
+  # -- START WhichKey --
+  WhichKey: "purple"
+  WhichKeySeperator: "green"
+  WhichKeyGroup: "cyan"
+  WhichKeyDesc: "cyan"
+  # -- END WhichKey --
+  # old stuff
+  diffAdded: "green"
+  diffRemoved: "red"
+  diffFileId: "yellow - br"
+  diffFile: "special_grey"
+  diffNewFile: "green"
+  diffOldFile: "red"
+  # ToolbarLine: ". darkgray"
+  # ToolbarButton: "suvagray - r"
+  debugPc: "- cyan"
+  debugBreakpoint: "red - r"
+  # terminal: "bg red green yellow blue magenta cyan silver gray red green yellow blue magenta cyan fg"
+  # -- Other junk you can define --
+  # Debug
+  # Ignore
+  # Tag
+  # Delimiter
+  # SpecialChar
+  # Cursor", { "fg": s:black, "bg": s:blue }) " the character under the cursor
+  # CursorIM", {}) " like Cursor, but used when in IME mode
+  # FoldColumn", {}) " 'foldcolumn'
+  # CursorLineNr", {}) " Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+  # MoreMsg", {}) " more-prompt
+  # ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
+  # ErrorMsg: "red - br"
+  # WarningMsg: "green - br"
+  # ModeMsg: "yellow - br"
+  # MoreMsg: "green - br"
+  # Question: "cyan - br"
+  # Directory: "blue - b"
