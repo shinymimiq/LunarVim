@@ -14,6 +14,7 @@ require('lv-which-key')
 
 -- LSP
 require('lsp')
+
 -- TODO should I put this in the filetype files?
 if O.lang.java.active then require('lsp.java-ls') end
 if O.lang.clang.active then require('lsp.clangd') end
@@ -50,3 +51,7 @@ if O.lang.tsserver.active then
     require('lsp.angular-ls')
     require('lsp.vue-ls')
 end
+
+
+-- Personal addons, such as new LSP 
+require('lsp.beancount')
