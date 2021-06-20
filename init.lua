@@ -53,5 +53,7 @@ if O.lang.tsserver.active then
 end
 
 
--- Personal addons, such as new LSP 
+-- Personal addons, such as new LSP
 require('lsp.beancount')
+
+require('onedark').setup()

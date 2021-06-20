@@ -385,10 +385,12 @@ return require("packer").startup(function(use)
     -- Customize
     use {"davidoc/taskpaper.vim"}
     use {'tpope/vim-fugitive'}
+    use {'navarasu/onedark.nvim'}
 
     -- Elixir
     use {"elixir-editors/vim-elixir",
         ft = {"elixir", "eelixir"},
         disable = not O.lang.elixir.active
     }
+
 end)
